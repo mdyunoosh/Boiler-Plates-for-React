@@ -1,0 +1,103 @@
+/* TaskManager.css */
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Sora:wght@400;500;600&display=swap');
+
+.tm-wrap {
+  font-family: 'Sora', sans-serif;
+  max-width: 480px;
+  margin: 2rem auto;
+  padding: 0 1rem 3rem;
+}
+
+.tm-title {
+  font-size: 26px;
+  font-weight: 600;
+  color: #111;
+  line-height: 1.1;
+}
+
+.tm-title span { color: #1D9E75; }
+
+.tm-count {
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  color: #888;
+  margin-top: 4px;
+}
+
+.tm-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 1.75rem;
+}
+
+.tm-input {
+  flex: 1;
+  height: 42px;
+  padding: 0 14px;
+  border: 0.5px solid #ddd;
+  border-radius: 8px;
+  font-family: 'Sora', sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.tm-input:focus {
+  border-color: #1D9E75;
+  box-shadow: 0 0 0 3px rgba(29, 158, 117, 0.12);
+}
+
+.tm-btn {
+  height: 42px;
+  padding: 0 18px;
+  background: #1D9E75;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Sora', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.tm-btn:hover { background: #0F6E56; }
+.tm-btn:active { transform: scale(0.97); }
+
+.tm-list { display: flex; flex-direction: column; gap: 6px; }
+
+.tm-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  background: #fff;
+  border: 0.5px solid #eee;
+  border-radius: 8px;
+  transition: border-color 0.15s;
+  animation: slideIn 0.2s ease;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.tm-item:hover { border-color: #ccc; background: #fafafa; }
+.tm-item.done  { background: #fafafa; }
+
+.tm-text { flex: 1; font-size: 14px; color: #111; }
+.tm-item.done .tm-text { color: #aaa; text-decoration: line-through; }
+
+.tm-del {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #ccc;
+  font-size: 18px;
+  opacity: 0;
+  transition: color 0.15s, opacity 0.15s;
+}
+
+.tm-item:hover .tm-del { opacity: 1; }
+.tm-del:hover { color: #E24B4A; }
