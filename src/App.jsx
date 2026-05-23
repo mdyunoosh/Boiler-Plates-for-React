@@ -7,11 +7,11 @@
 // import Event from "./core-concepts/06-eventhandling/Event";
 // import Form from "./core-concepts/06-eventhandling/Form";
 // import TaskManager from "./core-concepts/TaskManager/TaskManager";
-import UseEffect from "./hooks/UseEffect";
+import UseCallback from "./hooks/UseCallback";
 function App() {
  
 
-  return <UseEffect />;
+  return <UseCallback />;
   }
 
 export default App
